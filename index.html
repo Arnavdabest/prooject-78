@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+<title>project 78</title>
+</head>
+<body>
+    <h1>Family Book</h1>
+    <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" id="coverpage" style="width:30%">
+    <h2 id="name_of_member">The Family Book</h2>
+    <button id="next" onclick="next()">next</button>
+   
+    <script>
+    var images= [   
+    "https://i.postimg.cc/MKdhy06Z/family.jpg", 
+    "https://i.postimg.cc/wjMnFtMX/father.jpg" , 
+    "https://i.postimg.cc/bw5W5zSK/mother.jpg",
+    "https://i.postimg.cc/5ymDKL83/bro.jpg", 
+    "https://i.postimg.cc/JnL6wtrd/sister.jpg", 
+  
+    ];
+
+    var members= [
+        "the family book",
+        "Homer Simposon",
+        "Marge Simpson",
+        "Bart Simpson",
+        "Lisa Simpson"
+    ];
+var i= 0;
+    function next(){
+        var familymembers= 4;
+        i++;
+        if (i > familymembers){i=0};
+        document.getElementById("coverpage").src=images[i]; 
+        
+        document.getElementById("name_of_member").innerHTML=members[i];
+    }
+    
+        
+    </script>
+</body>
+</html>
